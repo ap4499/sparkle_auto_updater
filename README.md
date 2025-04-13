@@ -8,7 +8,7 @@ This package provides a non-visual Flet control (SparkleAutoUpdater) that you ad
 
 Add the dependency to the pyproject.toml file of your Flet app:
 
-**1. Stable Release (Recommended)**
+**1. Stable Release (Recommended) - current: v1.0.0**
 
 To install a specific stable version (e.g., v1.0.0), use the tag in the URL:
 
