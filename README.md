@@ -14,20 +14,20 @@ Link directly to this git repository:
 
 ```toml
 dependencies = [
-  "flet-sparkle-auto-updater @ git+https://github.com/ap4499/flet-sparkle-auto-updater.git",
+  "flet-sparkle-auto-updater @ git+https://github.com/ap4499/sparkle_auto_updater.git",
   "flet>=0.27.6",
 ]
 ```
 
 Alternatively, if using a requirements.txt, place the below as a line within it:
 
-```flet-sparkle-auto-updater @ git+https://github.com/ap4499/flet-sparkle-auto-updater.git```
+```flet-sparkle-auto-updater @ git+https://github.com/ap4499/sparkle_auto_updater.git```
 
 
 
 For development work, install via PIP:
 
-```pip install "flet-sparkle-auto-updater @ git+https://github.com/ap4499/flet-sparkle-auto-updater.git"```
+```pip install "flet-sparkle-auto-updater @ git+https://github.com/ap4499/sparkle_auto_updater.git"```
 
 
 
