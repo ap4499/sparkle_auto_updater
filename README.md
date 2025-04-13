@@ -8,26 +8,38 @@ This package provides a non-visual Flet control (SparkleAutoUpdater) that you ad
 
 Add the dependency to the pyproject.toml file of your Flet app:
 
-* **Git dependency**
+**1. Stable Release (Recommended)**
 
-Link directly to this git repository:
+To install a specific stable version (e.g., v1.0.0), use the tag in the URL:
 
-```toml
-dependencies = [
-  "flet-sparkle-auto-updater @ git+https://github.com/ap4499/sparkle_auto_updater.git",
-  "flet>=0.27.6",
-]
-```
+* In `pyproject.toml`:
+    ```toml
+    dependencies = [
+      "flet-sparkle-auto-updater @ git+[https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0](https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0)",
+      # ...
+    ]
+    ```
+* Or with pip:
+    ```bash
+    pip install "flet-sparkle-auto-updater @ git+[https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0](https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0)"
+    ```
+    *(Replace `v1.0.0` with the desired release tag)*
 
-Alternatively, if using a requirements.txt, place the below as a line within it:
+**2. Latest Development Version (Potentially Unstable)**
 
-```flet-sparkle-auto-updater @ git+https://github.com/ap4499/sparkle_auto_updater.git```
+To install the very latest code from the `main` branch:
 
-
-
-For development work, install via PIP:
-
-```pip install "flet-sparkle-auto-updater @ git+https://github.com/ap4499/sparkle_auto_updater.git"```
+* In `pyproject.toml`:
+    ```toml
+    dependencies = [
+      "flet-sparkle-auto-updater @ git+[https://github.com/ap4499/sparkle_auto_updater.git](https://github.com/ap4499/sparkle_auto_updater.git)",
+      # ...
+    ]
+    ```
+* Or with pip:
+    ```bash
+    pip install "flet-sparkle-auto-updater @ git+[https://github.com/ap4499/sparkle_auto_updater.git](https://github.com/ap4499/sparkle_auto_updater.git)"
+    ```
 
 
 
