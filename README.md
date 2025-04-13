@@ -1,4 +1,4 @@
-# flet-sparkle-auto-updater
+# sparkle-auto-updater
 
 Sparkle integration for Flet applications, enabling automatic updates on macOS using the [leanflutter/auto_updater](https://github.com/leanflutter/auto_updater) native plugin which utilizes the [Sparkle Project](https://github.com/sparkle-project/Sparkle/).
 
