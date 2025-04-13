@@ -1,0 +1,21 @@
+name: sparkle_auto_updater
+description: Flet SparkleAutoUpdater control
+repository: https://github.com/MyGithubAccount/sparkle-auto-updater/src/flutter/sparkle_auto_updater
+version: 0.1.0
+homepage: https://github.com/MyGithubAccount/sparkle-auto-updater
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  auto_updater: ^1.0.0
+  flet: 0.27.6
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  

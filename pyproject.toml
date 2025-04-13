@@ -1,0 +1,42 @@
+[project]
+name = "sparkle_auto_updater"
+version = "0.1.0"
+description = "SparkleAutoUpdater control for Flet"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Alex Proctor", email = "you@example.com" }
+]
+dependencies = [
+    "flet>=0.27.6",
+]
+
+[project.urls]
+Homepage = "https://github.com/ap4499/sparkle_auto_updater"
+Documentation = "https://github.com/ap4499/sparkle_auto_updater"
+Repository = "https://github.com/ap4499/sparkle_auto_updater"
+Issues = "https://github.com/ap4499/sparkle_auto_updater"
+
+[tool.setuptools.package-data]
+"flutter.sparkle_auto_updater" = ["**/*"]
+
+[tool.uv]
+dev-dependencies = [
+    "flet[all]==0.27.6",
+    "mkdocs", 
+    "mkdocs-material",
+    "mkdocstrings[python]"
+]
+
+[tool.poetry.group.dev.dependencies]
+flet = {extras = ["all"], version = "0.27.6"}
+mkdocs = "*"
+mkdocstrings = { extras = ["python"], version = "*" }
+mkdocs-material = "*"
+
+[tool.setuptools]
+license-files = []
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

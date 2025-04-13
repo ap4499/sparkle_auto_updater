@@ -1,0 +1,63 @@
+[project]
+name = "sparkle-auto-updater-example"
+version = "1.0.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Flet developer", email = "you@example.com" }
+]
+dependencies = [
+  "sparkle-auto-updater",
+  "flet>=0.27.6",
+]
+
+
+######################################################################################################################################################
+# These are the entries required to setup Sparkle.
+# See: https://sparkle-project.org/documentation/
+
+[tool.flet.macos.info]
+# Add Sparkle keys using native TOML types
+SUFeedURL = "https://USER.github.io/APP/appcast.xml" # TOML String
+SUEnableAutomaticChecks = true                            # TOML Boolean
+SUScheduledCheckInterval = 86400                          # TOML Integer
+SUPublicEDKey = "1234567890qwertyuiop" #(EXAMPLE Key!) Use Sparkle’s generate_keys tool to get it.
+
+
+[tool.flet]
+# org name in reverse domain name notation, e.g. "com.mycompany".
+# Combined with project.name to build bundle ID for iOS and Android apps
+org = "com.mycompany"
+build_number = 2 # This is "Bundle version". It is used by Sparkle as the comparator to determine updates. It is recommended to use an Integer. Advanced users can see Sparkle documentation to see how semantic versioning works.
+
+######################################################################################################################################################
+
+
+# project display name that is used as an app title on Android and iOS home screens,
+# shown in window titles and about app dialogs on desktop.
+product = "sparkle-auto-updater-example"
+
+# company name to display in about app dialogs
+company = "Flet"
+
+# copyright text to display in about app dialogs
+copyright = "Copyright (C) 2025 by MyCompany"
+
+[tool.flet.app]
+path = "src"
+
+[tool.flet.dev_packages]
+sparkle-auto-updater = "../.." # relative path
+
+[tool.uv]
+dev-dependencies = [
+    "flet[all]==0.27.6",
+]
+
+[tool.uv.sources]
+sparkle-auto-updater = { path = "../../", editable = true }
+
+[tool.poetry.group.dev.dependencies]
+flet = {extras = ["all"], version = "0.27.6"}
+sparkle-auto-updater = {path = "../../", develop = true}
