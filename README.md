@@ -13,23 +13,17 @@ You can install `sparkle-auto-updater` directly from GitHub using `pip`. Choose 
 Install the latest stable version using its specific Git tag.
 
 * **In `pyproject.toml`:**
-    Add the dependency using the `package_name @ git+url@tag` format:
+    Add the dependency to your `dependencies` list:
     ```toml
-    # pyproject.toml
     [project]
     dependencies = [
         "sparkle-auto-updater @ git+[https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0](https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0)",
-        # Other dependencies...
     ]
     ```
 
 * **Or with `pip`:**
-    You can install directly from the command line:
+    Install directly from the command line:
     ```bash
-    # Option 1: Explicitly state the package name (matches metadata)
-    pip install "sparkle-auto-updater @ git+[https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0](https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0)"
-
-    # Option 2: Let pip infer the name from the repository's metadata (recommended)
     pip install "git+[https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0](https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0)"
     ```
     *(Replace `v1.0.0` with the desired release tag if installing a different specific version)*
@@ -41,11 +35,9 @@ Install the very latest code directly from the `main` branch. Note that this ver
 * **In `pyproject.toml`:**
     Specify the `main` branch instead of a tag:
     ```toml
-    # pyproject.toml
     [project]
     dependencies = [
         "sparkle-auto-updater @ git+[https://github.com/ap4499/sparkle_auto_updater.git@main](https://github.com/ap4499/sparkle_auto_updater.git@main)",
-        # Other dependencies...
     ]
     ```
 
