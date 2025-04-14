@@ -47,7 +47,6 @@ Install the very latest code directly from the `main` branch. Note that this ver
     pip install "git+[https://github.com/ap4499/sparkle_auto_updater.git@main](https://github.com/ap4499/sparkle_auto_updater.git@main)"
     ```
 
-
 ## Basic Usage
 
 1.  **Import the control:**
