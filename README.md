@@ -17,14 +17,14 @@ Install the latest stable version using its specific Git tag.
     ```toml
     [project]
     dependencies = [
-        "sparkle-auto-updater @ git+[https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0](https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0)",
+        "sparkle-auto-updater @ git+https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0",
     ]
     ```
 
 * **Or with `pip`:**
     Install directly from the command line:
     ```bash
-    pip install "git+[https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0](https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0)"
+    pip install "git+https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0"
     ```
     *(Replace `v1.0.0` with the desired release tag if installing a different specific version)*
 
@@ -37,14 +37,14 @@ Install the very latest code directly from the `main` branch. Note that this ver
     ```toml
     [project]
     dependencies = [
-        "sparkle-auto-updater @ git+[https://github.com/ap4499/sparkle_auto_updater.git@main](https://github.com/ap4499/sparkle_auto_updater.git@main)",
+        "sparkle-auto-updater @ git+https://github.com/ap4499/sparkle_auto_updater.git@main",
     ]
     ```
 
 * **Or with `pip`:**
     Use `@main` to target the development branch:
     ```bash
-    pip install "git+[https://github.com/ap4499/sparkle_auto_updater.git@main](https://github.com/ap4499/sparkle_auto_updater.git@main)"
+    pip install "git+https://github.com/ap4499/sparkle_auto_updater.git@main"
     ```
 
 ## Basic Usage
