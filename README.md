@@ -6,41 +6,54 @@ This package provides a non-visual Flet control (SparkleAutoUpdater) that you ad
 
 ## Installation
 
-Add the dependency to the pyproject.toml file of your Flet app:
+You can install `sparkle-auto-updater` directly from GitHub using `pip`. Choose between the latest stable release or the current development version.
 
 **1. Stable Release (Recommended) - current: v1.0.0**
 
-To install a specific stable version (e.g., v1.0.0), use the tag in the URL:
+Install the latest stable version using its specific Git tag.
 
-* In `pyproject.toml`:
+* **In `pyproject.toml`:**
+    Add the dependency using the `package_name @ git+url@tag` format:
     ```toml
+    # pyproject.toml
+    [project]
     dependencies = [
-      "flet-sparkle-auto-updater @ git+[https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0](https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0)",
-      # ...
+        "sparkle-auto-updater @ git+[https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0](https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0)",
+        # Other dependencies...
     ]
     ```
-* Or with pip:
+
+* **Or with `pip`:**
+    You can install directly from the command line:
     ```bash
-    pip install "flet-sparkle-auto-updater @ git+[https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0](https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0)"
+    # Option 1: Explicitly state the package name (matches metadata)
+    pip install "sparkle-auto-updater @ git+[https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0](https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0)"
+
+    # Option 2: Let pip infer the name from the repository's metadata (recommended)
+    pip install "git+[https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0](https://github.com/ap4499/sparkle_auto_updater.git@v1.0.0)"
     ```
-    *(Replace `v1.0.0` with the desired release tag)*
+    *(Replace `v1.0.0` with the desired release tag if installing a different specific version)*
 
 **2. Latest Development Version (Potentially Unstable)**
 
-To install the very latest code from the `main` branch:
+Install the very latest code directly from the `main` branch. Note that this version may contain bugs or incomplete features and is not recommended for production use.
 
-* In `pyproject.toml`:
+* **In `pyproject.toml`:**
+    Specify the `main` branch instead of a tag:
     ```toml
+    # pyproject.toml
+    [project]
     dependencies = [
-      "flet-sparkle-auto-updater @ git+[https://github.com/ap4499/sparkle_auto_updater.git](https://github.com/ap4499/sparkle_auto_updater.git)",
-      # ...
+        "sparkle-auto-updater @ git+[https://github.com/ap4499/sparkle_auto_updater.git@main](https://github.com/ap4499/sparkle_auto_updater.git@main)",
+        # Other dependencies...
     ]
     ```
-* Or with pip:
-    ```bash
-    pip install "flet-sparkle-auto-updater @ git+[https://github.com/ap4499/sparkle_auto_updater.git](https://github.com/ap4499/sparkle_auto_updater.git)"
-    ```
 
+* **Or with `pip`:**
+    Use `@main` to target the development branch:
+    ```bash
+    pip install "git+[https://github.com/ap4499/sparkle_auto_updater.git@main](https://github.com/ap4499/sparkle_auto_updater.git@main)"
+    ```
 
 
 ## Basic Usage
