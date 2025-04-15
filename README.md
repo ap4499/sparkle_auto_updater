@@ -125,6 +125,7 @@ build_number = 2 # This is "Bundle version". It is used by Sparkle as the compar
 
 ## Sparkle native steps
 _These steps are Sparkle native._
+
 You should obtain a copy of Sparkle from https://github.com/sparkle-project/Sparkle/releases/tag/2.7.0 (this file: Sparkle-2.7.0.tar.xz.)
 
 The official documentation can be found here: https://sparkle-project.org/documentation/
@@ -143,7 +144,7 @@ The official documentation can be found here: https://sparkle-project.org/docume
     
     - You will need to generate an appcast, and place it onto a server that is HTTPS. This is what Sparkle will use as the comparator, to determine whether an update should be made. 
     
-    - Again, from the bin folder, running the "generate_appcast" will generate both the appcast file that you will need, and also the public facing output that is the combination of your application's hash, and your private key (note - the private key must _never_ be shared).
+    - From the bin folder, running the "generate_appcast" will generate both the appcast file that you will need, and also the public facing output that is the combination of your application's hash, and your private key (note - the private key must _never_ be shared).
 
 
 
