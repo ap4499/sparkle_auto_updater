@@ -101,27 +101,27 @@ build_number = 2 # This is "Bundle version". It is used by Sparkle as the compar
 - When SUEnableAutomaticChecks is set to True, Sparkle will automatically try to update the application (when it is run). The user can override this within the pop-up.
 
 7.  **Dev commands:**
-Sparkle automatically creates defaults. During development you may wish to reset these, to check behaviour.
-
-Read variables example (MacOS terminal):
-```defaults read com.mycompany.sparkle-auto-updater-example```
-
-example response:
-```
-{
-    SUAutomaticallyUpdate = 1;
-    SUEnableAutomaticChecks = 1;
-    SUHasLaunchedBefore = 1;
-    SULastCheckTime = "2025-04-07 12:30:13 +0000";
-    SUSendProfileInfo = 0;
-    SUSkippedVersion = 3;
-    SUUpdateGroupIdentifier = 351040012;
-}
-```
-
-
-Delete all defaults:
-```defaults delete com.mycompany.sparkle-auto-updater-example```
+    Sparkle automatically creates defaults. During development you may wish to reset these, to check behaviour.
+    
+    Read variables example (MacOS terminal):
+    ```defaults read com.mycompany.sparkle-auto-updater-example```
+    
+    example response:
+    ```
+    {
+        SUAutomaticallyUpdate = 1;
+        SUEnableAutomaticChecks = 1;
+        SUHasLaunchedBefore = 1;
+        SULastCheckTime = "2025-04-07 12:30:13 +0000";
+        SUSendProfileInfo = 0;
+        SUSkippedVersion = 3;
+        SUUpdateGroupIdentifier = 351040012;
+    }
+    ```
+    
+    
+    Delete all defaults:
+    ```defaults delete com.mycompany.sparkle-auto-updater-example```
 
 ## Sparkle native steps
 _These steps are Sparkle native._
@@ -131,19 +131,19 @@ The official documentation can be found here: https://sparkle-project.org/docume
 
 
 8.  **Generating keys:**
-Reference in official documentation: "3. Segue for security concerns - EdDSA (ed25519) signatures"
-
-It details how to create your key pairs and how they are used. You will of course need the public key to place inside of your pyproject.toml (which is destined for the .plist file).
-
-Within the bin folder of the Sparkle application referenced above, you will find the scripts that you need to generate the keys. Note that you may need to rename your keychain entry to "Sparkle EdDSA Private Key". You will likely be able to search your keychain for "Sparkle" to identify the original entry.
+    Reference in official documentation: "3. Segue for security concerns - EdDSA (ed25519) signatures"
+    
+    - It details how to create your key pairs and how they are used. You will of course need the public key to place inside of your pyproject.toml (which is destined for the .plist file).
+    
+    - Within the bin folder of the Sparkle application referenced above, you will find the scripts that you need to generate the keys. Note that you may need to rename your keychain entry to "Sparkle EdDSA Private Key". You will likely be able to search your keychain for "Sparkle" to identify the original entry.
 
 
 9.  **Generating an appcast:**
-Reference in official documentation: "5. Publish your appcast"
-
-You will need to generate an appcast, and place it onto a server that is HTTPS. This is what Sparkle will use as the comparator, to determine whether an update should be made. 
-
-Again, from the bin folder, running the "generate_appcast" will generate both the appcast file that you will need, and also the public facing output that is the combination of your application's hash, and your private key (note - the private key must _never_ be shared).
+    Reference in official documentation: "5. Publish your appcast"
+    
+    - You will need to generate an appcast, and place it onto a server that is HTTPS. This is what Sparkle will use as the comparator, to determine whether an update should be made. 
+    
+    - Again, from the bin folder, running the "generate_appcast" will generate both the appcast file that you will need, and also the public facing output that is the combination of your application's hash, and your private key (note - the private key must _never_ be shared).
 
 
 
