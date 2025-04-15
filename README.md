@@ -123,14 +123,27 @@ example response:
 Delete all defaults:
 ```defaults delete com.mycompany.sparkle-auto-updater-example```
 
-8.  **Generating keys:**
+## Sparkle native steps
+_These steps are Sparkle native._
+You should obtain a copy of Sparkle from https://github.com/sparkle-project/Sparkle/releases/tag/2.7.0 (this file: Sparkle-2.7.0.tar.xz.)
 
-See the following heading within (https://sparkle-project.org/documentation/):
-EdDSA (ed25519) signatures
+The official documentation can be found here: https://sparkle-project.org/documentation/
+
+
+8.  **Generating keys:**
+Reference in official documentation: "3. Segue for security concerns - EdDSA (ed25519) signatures"
 
 It details how to create your key pairs and how they are used. You will of course need the public key to place inside of your pyproject.toml (which is destined for the .plist file).
 
-To generate keys, you should access the file: Sparkle-2.7.0.tar.xz. Within the bin folder, you will find the scripts that you need to generate the keys. I did also have to rename the keychain entry to "Sparkle EdDSA Private Key".
+Within the bin folder of the Sparkle application referenced above, you will find the scripts that you need to generate the keys. Note that you may need to rename your keychain entry to "Sparkle EdDSA Private Key". You will likely be able to search your keychain for "Sparkle" to identify the original entry.
+
+
+9.  **Generating an appcast:**
+Reference in official documentation: "5. Publish your appcast"
+
+You will need to generate an appcast, and place it onto a server that is HTTPS. This is what Sparkle will use as the comparator, to determine whether an update should be made. 
+
+Again, from the bin folder, running the "generate_appcast" will generate both the appcast file that you will need, and also the public facing output that is the combination of your application's hash, and your private key (note - the private key must _never_ be shared).
 
 
 
